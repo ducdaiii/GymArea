@@ -1,0 +1,180 @@
+﻿<!doctype html>
+<html lang="vi">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Trung tâm thể thao</title>
+    <link href="//fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700&display=swap" rel="stylesheet">
+
+    <link href="~/Content/css/style-starter.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <!-----------------header-------------------------->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1> <a class="navbar-brand" href="index.html"><span class="lnr lnr-bicycle"></span> TTTT</a></h1>
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-auto">
+                        <li class=nav-item> @Html.ActionLink("Trang chủ", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li class=nav-item> @Html.ActionLink("Dịch Vụ", "Service", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li class=nav-item>@Html.ActionLink("Khoá học", "Classes", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li class=nav-item>@Html.ActionLink("Sự kiện", "Event", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li class=nav-item>@Html.ActionLink("Liên hệ", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#popup1">Đăng nhập</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!-----------------//header//-------------------------->
+  <div>
+      @RenderBody()
+  </div>
+
+    <!-----------------footers-------------------------->
+    <section class="w3l-footers-20">
+        <div class="footers20">
+            <div class="container">
+                <div class="footers20-content">
+                    <div class="d-grid grid-col-4 grids-content">
+                        <div class="column">
+                            <h4>Địa chỉ</h4>
+                            <p class="contact-para3">828 Sư Vạn Hạnh, phường 13, quận 10, thành phố Hồ Chí Minh</p>
+                            <a href="contact.html">
+                                <p class="contact-map mt-2"><span class="lnr lnr-map-marker"></span>Vị trí</p>
+                            </a>
+                        </div>
+                        <div class="column">
+                            <h4>Thông tin liên lạc</h4>
+                            <a href="tel:+84-346-297-236">
+                                <p class="contact-phone mt-2"><span class="lnr lnr-phone-handset"></span>
+                                    +84-346-297-236</p>
+                            </a>
+                            <a href="mailto:ducduong260103@gmail.com">
+                                <p class="contact-mail mt-1"><span class="lnr lnr-envelope"></span>
+                                    ducduong260103@gmail.com</p>
+                            </a>
+                        </div>
+                        <div class="column">
+                            <h4>Thời gian mở</h4>
+                            <p>Chúng tôi hoạt động trong thời gian</p>
+                            <p class="mt-1"><span class="lnr lnr-clock"></span> <strong>Thứ hai - Thứ sáu</strong> : 7
+                                am - 9 pm</p>
+                            <p class="mt-1"><span class="lnr lnr-clock"></span> <strong>Thứ bảy- Chủ nhật</strong> : 10
+                                am - 8 pm
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- move top -->
+        <button onclick="topFunction()" id="movetop" title="Go to top"> &#10548;
+        </button>
+    </section>
+    <!-----------------//footers//-------------------------->
+
+    <!-- popup for login -->
+    <div id="popup1" class="popup-effect">
+        <div class="popup">
+            <div class="login px-sm-4 mx-auto mw-100">
+                <h5 style="color: black;" class="text-center mb-4">Đăng nhập</h5>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label class="mb-2">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="" required="">
+                        <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-2">Mật khẩu</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder=""
+                            required="">
+                    </div>
+                    <button type="submit" class="btn btn-primary submit mt-4 "">Đăng nhập</button>
+				<p class=" text-center mt-2">
+                        <a href="#popup2"> Bạn chưa có tài khoản?</a>
+                        </p>
+                </form>
+            </div>
+
+            <a class="close" href="#">&times;</a>
+        </div>
+    </div>
+    <!-- //popup for login -->
+
+    <!-- popup for register -->
+    <div id="popup2" class="popup-effect">
+        <div class="popup">
+            <div class="login px-sm-4 mx-auto mw-100">
+                <h5 style="color: black;" class="text-center mb-4">Đăng ký ngay</h5>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label>Họ và tên</label>
+                        <input type="text" class="form-control" id="validationDefault01" placeholder="" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" id="validationDefault02" placeholder="" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-2">Mật khẩu</label>
+                        <input type="password" class="form-control" id="password1" placeholder="" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Xác nhận mật khẩu</label>
+                        <input type="password" class="form-control" id="password2" placeholder="" required="">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary submit">Đăng ký</button>
+                </form>
+            </div>
+            <a class="close" href="#">&times;</a>
+        </div>
+    </div>
+    <!-- //popup for register -->
+
+    <script src="~/Content/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Content/js/theme-change.js"></script><!-- theme switch js (light and dark)-->
+    <script src="~/Content/js/lightbox-plus-jquery.min.js"></script>
+    <script src="~/Content/js/owl.carousel.js"></script>
+    <script src="~/Content/js/jquery.waypoints.min.js"></script>
+    <script src="~/Content/js/jquery.countup.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/js/mystyle.js"></script>
+</body>
+
+</html>
